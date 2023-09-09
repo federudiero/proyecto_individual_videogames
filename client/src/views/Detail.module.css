@@ -1,0 +1,18 @@
+.conatinerDetail{
+  display: flex;
+  justify-content: center;
+  background-image:url(../img/patron.jpg);
+}
+
+.conatinerDetailHijo{
+    width: 80%;
+    background: linear-gradient(90deg, #83a7cbb1 0%, #332433b4 100%);
+}
+
+.imgDetail{
+    width: 100%;
+}
+.pDetailCard{
+  font-weight: 700;
+  text-align: center;
+}

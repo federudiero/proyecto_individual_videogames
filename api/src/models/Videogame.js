@@ -22,7 +22,8 @@ module.exports = (sequelize) => {
     
     background_image: {
       type: DataTypes.TEXT,
-    },released: {
+    },
+    released: {
       type:DataTypes.DATEONLY,
     },
     rating: {

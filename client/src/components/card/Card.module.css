@@ -1,0 +1,44 @@
+.Card{
+    margin: 15px;
+    position: relative;
+
+    background: linear-gradient(157deg, rgba(35, 50, 64, 0.172) 0%, rgba(35, 50, 64, 0.286) 74%);
+    
+    margin: 4px;
+    overflow: hidden;
+    height: 500px;
+    width: 400px;
+    transition: 0.5s;
+    color: bisque;
+border-radius: 10%;
+
+}
+.Card:hover{
+    background: linear-gradient(157deg, rgba(37, 61, 82, 0.632) 0%, rgba(37, 61, 82, 0.552) 74%);
+    position: relative;
+
+    
+    
+    margin: 4px;
+    overflow: hidden;
+    height: 500px;
+    width: 400px;
+    
+    transition: 0.5s;
+    box-shadow: 5px 1px 8px 1px rgb(80, 80, 80);
+   
+
+}
+
+.CardImg{
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 250px; /* Ajusta la altura automáticamente para mantener la proporción */
+    
+    
+    
+}
+.Pdetail{
+    color: beige;
+    font-size: 20px;
+    text-decoration:none;
+  }

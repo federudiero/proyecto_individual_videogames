@@ -12,22 +12,22 @@ function App() {
  
 
 
-    <Route path='/home'> 
-      <Home/>
-    </Route>
 
 
     <Route exact path='/'>
       <Landing/>
     </Route>
 
+    <Route path='/home'> 
+      <Home/>
+    </Route>
 
-    <Route exact path='/form'>
+    <Route path='/form'>
       <Form/>
     </Route>
 
 
-    <Route exact path='/detail'>
+    <Route  path='/detail/:id'>
       <Detail/>
     </Route>
      

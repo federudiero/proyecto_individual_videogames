@@ -10,8 +10,15 @@ const {
   arrangeDbId,
 } = require("../utils/arrangeApiDb");
 
+
+
+
+
+
+
 const getDbVideogames = async () => {
  
+
   let dbVideogames = await Videogame.findAll({
     include: {
       model: Genre,
@@ -23,17 +30,61 @@ const getDbVideogames = async () => {
   return dbVideogames.map((dbVg) => arrangeDb(dbVg));
 };
 
+
+
+
+
+
+
+
 const getApiVideogames = async () => {
  
-  let contain = [];
-  for (let i = 1; i <= 4; i++){
-  contain = [...contain,...(await axios.get(`https://api.rawg.io/api/games?page=${i}&page_size=30&key=${API_KEY}`)).data.results]}
-  
-  return contain.map((apiVg) => arrangeApi(apiVg));
+  const pagina1 = await axios(`https://api.rawg.io/api/games?key=${API_KEY}`)
+  .then((response) => response.data); 
+const pagina2 = await axios(`https://api.rawg.io/api/games?key=${API_KEY}&page=2`)
+  .then((response) => response.data);
+const pagina3 = await axios(
+  `https://api.rawg.io/api/games?key=${API_KEY}&page=3`
+).then((response) => response.data);
+const pagina4 = await axios(`https://api.rawg.io/api/games?key=${API_KEY}&page=4`)
+  .then((response) => response.data);
+const pagina5 = await axios(`https://api.rawg.io/api/games?key=${API_KEY}&page=5`)
+  .then((response) => response.data);
+const pagina6 = await axios(`https://api.rawg.io/api/games?key=${API_KEY}&page=6`)
+  .then((response) => response.data);
+
+await Promise.all([pagina1, pagina2, pagina3, pagina4, pagina5, pagina6]).then((p) => {
+  apiGameInfo = p[0].results
+    .concat(p[1].results)
+    .concat(p[2].results)
+    .concat(p[3].results)
+    .concat(p[4].results)
+    .concat(p[5].results);
+});
+
+const allVideogamesApi = await apiGameInfo.map((vg) => {
+  return {
+    id: vg.id,
+    name: vg.name,
+    released: vg.released,
+    background_image: vg.background_image,
+    rating: vg.rating,
+    rating_top: vg.rating_top,
+    platforms: vg.platforms.map((p) => p.platform.name),
+    genres: vg.genres.map((g) => g.name),
+  };
+})
+return allVideogamesApi;
+
 };
 
+
+
+
+
+
 const getDbVideogameByName = async (search) => {
- 
+  
   let dbVideogames = await Videogame.findAll(
     {
       where: { name: { [Op.iLike]: `%${search}%` } },
@@ -51,6 +102,12 @@ const getDbVideogameByName = async (search) => {
   return dbVideogames.map((dbVg) => arrangeDb(dbVg));
 };
 
+
+
+
+
+
+
 const getApiVideogamesByName = async (search) => {
  
   const { data } = await axios.get(
@@ -59,6 +116,12 @@ const getApiVideogamesByName = async (search) => {
   
   return data.results.map((apiVideogame) => arrangeApi(apiVideogame));
 };
+
+
+
+
+
+
 
 const getVideogameById = async (idVideogame) => {
   if (isNaN(idVideogame)) {
@@ -78,6 +141,13 @@ const getVideogameById = async (idVideogame) => {
   }
 };
 
+
+
+
+
+
+
+
 const postVideogame = async (id,name,description,platforms,background_image,released,rating,genres) => {
   
   const newGame = await Videogame.create({
@@ -94,6 +164,12 @@ const postVideogame = async (id,name,description,platforms,background_image,rele
   
   return newGame;
 };
+
+
+
+
+
+
 
 module.exports = {
   getDbVideogames,

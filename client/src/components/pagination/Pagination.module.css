@@ -1,0 +1,26 @@
+.containerPag{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.Pag{
+    height: 30px;
+    width: 120px;
+    background-color: black;
+    color: beige;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+
+
+}
+.h2pag{
+    color: beige;
+    font-size: 30px;
+    border: 2px solid beige;
+    padding: 4px;
+}

@@ -1,0 +1,21 @@
+.container{
+    background-image: url(../img/patron.jpg);
+    height: 100%;
+}
+.buttonCaontainer{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+   
+    
+}
+.buttonCaontainer{
+   
+  
+    height: 80px;
+}
+
+.loading{
+    color: bisque;
+    font-size: 30px;
+}

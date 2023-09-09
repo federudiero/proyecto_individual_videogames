@@ -1,0 +1,41 @@
+.containerSarchBar{
+    background-image: url(../../img/patron.jpg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    
+}
+.inputSarchBar{
+    width: 300px;
+    height: 30px;
+    background-color: black;
+    border: none;
+    color: bisque;
+    border-radius: 10%;
+}
+.buttonSarchBar{
+    background-color: rgb(0, 0, 0);
+    color: bisque;
+    height: 50px;
+    width: 130px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid rgb(125, 125, 125);
+    border-radius: 15%;
+    cursor: pointer;
+    margin: 4px;
+ 
+}
+.buttonFormSarchBar{
+    background-color: rgb(0, 0, 0);
+    color: bisque;
+    height: 50px;
+    width: 220px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid rgb(125, 125, 125);
+    border-radius: 15%;
+    cursor: pointer;
+    margin: 4px;
+}

@@ -33,11 +33,11 @@ const arrangeApi= (data) => {
 
   const arrangeDb = (data) => {
    
-    let { id, name, platforms, background_image, released, rating, genres } =data;
+    let { id, name, platforms,description, background_image, released, rating, genres } =data;
     
     genres = genres.map((gen) => gen.name);
    
-    return {id,name,platforms,background_image,released,rating:Number(rating),genres};
+    return {id,name,platforms,description,background_image,released,rating:Number(rating),genres};
   };
   
 
@@ -49,7 +49,7 @@ const arrangeApi= (data) => {
    
     genres = genres.map((gen) => gen.name);
    
-    return {id,name,platforms,background_image,released,rating:Number(rating),genres};
+    return {id,name,platforms,description,background_image,released,rating:Number(rating),genres};
   };
   
   module.exports = {

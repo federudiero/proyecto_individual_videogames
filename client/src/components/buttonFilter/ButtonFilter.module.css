@@ -1,0 +1,63 @@
+.container{
+    
+    display: flex;
+    align-items: center;
+    
+    
+
+}
+
+
+.buttonSelect{
+    background-color: rgb(0, 0, 0);
+    color: bisque;
+    height: 50px;
+    width: 150px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid rgb(125, 125, 125);
+    border-radius: 15%;
+    cursor: pointer;
+    margin: 4px;
+    transition: 1s;
+}
+.buttonSelect:hover{
+    background-color: rgb(0, 0, 0);
+    color: bisque;
+    height: 50px;
+    width: 150px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid rgb(125, 125, 125);
+    border-radius: 15%;
+    cursor: pointer;
+    margin: 4px;
+    box-shadow: 5px 5px 6px 1px black;
+    transition: 0.5s;
+}
+
+ .buttonResete{
+    background-color: rgb(0, 0, 0);
+    color: bisque;
+    height: 50px;
+    width: 150px;
+    border: 2px solid bisque;
+    border-radius: 15%;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 4px;
+    transition: 0.5s;
+ }
+ .buttonResete:hover{
+    background-color: rgb(0, 0, 0);
+    color: bisque;
+    height: 50px;
+    width: 150px;
+    font-weight: 700;
+    border: 2px solid rgb(106, 185, 16);
+    border-radius: 15%;
+    cursor: pointer;
+    margin: 4px;
+    box-shadow: 5px 5px 6px 1px black;
+    transition: 0.7s;
+ }
