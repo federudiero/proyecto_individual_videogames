@@ -1,5 +1,5 @@
 import Card from '../card/Card'
-import { useSelector } from 'react-redux'
+
 import style from '../cardContainer/CardContainer.module.css'
 
 function CardContainer({slicePage}) {

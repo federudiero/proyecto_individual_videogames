@@ -15,8 +15,7 @@ export const validate = (form) => {
     if (form.platforms.length === 0)
       errors.platforms = "There must be at least 1 platform";
     
-    if (!urlRegex.test(form.background_image))
-      errors.background_image = "Invalid URL";
+   
     
     if (form.released === "") errors.released = "Date cannot be null";
     else if (!dateRegex.test(form.released))

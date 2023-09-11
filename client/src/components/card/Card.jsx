@@ -11,7 +11,7 @@ function Card({game}) {
       <p>{game.rating}</p>
 
       <Link className={style.Pdetail} to={`/detail/${game.id}`}>
-      <p className={style.Pdetail}>ir al detalle</p>
+      <samp className={style.Pdetail}>Detalle</samp>
       </Link>
     </div>
   )

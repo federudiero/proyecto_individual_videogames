@@ -170,14 +170,34 @@ const postVideogame = async (id,name,description,platforms,background_image,rele
 
 
 
+const deleteVideogames = async(id)=>{
+
+const response = await Videogame.findByPk(id)
+
+const copyVideogameDelete= {...response}
+
+if (!response) throw Error('no existe ningun juego');
+
+await response.destroy()
+
+return copyVideogameDelete
+
+
+}
+
+
+
+
 
 module.exports = {
+  
   getDbVideogames,
   getApiVideogames,
   getDbVideogameByName,
   getApiVideogamesByName,
   getVideogameById,
   postVideogame,
+  deleteVideogames
 };
 
 

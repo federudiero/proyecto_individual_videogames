@@ -1,7 +1,8 @@
-import { FILTER_BY_DB,FILTER_GENRES,ORDER_BY_RATING,ORDER_BY_AZ,POST_VIDEOGAME,GET_GENRES,GET_VIDEOGAMES ,GET_BY_NAME, GET_BY_ID ,CLEAR_DETAIL} from "./actions";
+import { FILTER_BY_DB,FILTER_GENRES,ORDER_BY_RATING,ORDER_BY_AZ,POST_VIDEOGAME,GET_GENRES,GET_VIDEOGAMES ,GET_BY_NAME, GET_BY_ID ,CLEAR_DETAIL, DELETE} from "./actions";
 
 const initialState = {
   games: [],
+  databasse: [],
   detail: [],
   genres:[],
 };
@@ -81,12 +82,18 @@ const rootReducer = (state = initialState, action) => {
                   state.games.filter((g) => !g.id.toString().includes("-"))
                   : [...state.games]
         
-            console.log(filterVideogames);
+            
             return {
               ...state,
       
               games: filterVideogames,
             };
+            case DELETE:
+              return {
+                ...state,
+               
+                games: state.games.filter((v) => v.id !== action.payload)
+              };
       
 
       

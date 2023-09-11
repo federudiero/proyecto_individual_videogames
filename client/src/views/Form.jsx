@@ -122,8 +122,7 @@ function Form() {
         rating,
         genres,
       } = form;
-      axios
-        .post("http://localhost:3001/videogames", {
+     axios.post("http://localhost:3001/videogames", {
           name,
           description,
           platforms,
@@ -217,15 +216,8 @@ function Form() {
 
       <div className={style.inputContainer}>
         <label className={style.label}>Image</label>
-        <input
-          className={style.input}
-          type="text"
-          value={form.background_image}
-          onChange={changeHandler}
-          name="background_image"
-          placeholder="http://www.some.thing..."
-        />
-        <span className={style.error}>{errors.background_image}</span>
+        <input type="file"  name="background_image"  accept="image/*" onChange={changeHandler} value={form.background_image}/> 
+      
       </div>
 
 

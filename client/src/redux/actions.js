@@ -10,6 +10,8 @@ export const FILTER_BY_DB = "FILTER_BY_DB";
 export const ORDER_BY_AZ = "ORDER_BY_AZ";
 export const ORDER_BY_RATING = "ORDER_BY_RATING";
 export const GET_GENRES = "GET_GENRES";
+export const DELETE = "DELETE";
+export const GET_VIDEOGAMES_DB = "GET_VIDEOGAMES_DB";
 
 
 
@@ -31,6 +33,18 @@ export const GET_GENRES = "GET_GENRES";
   };
 };
 
+
+
+export const getVideogamesDB = () => {
+  return async (dispatch) => {
+    const {data} = await axios("http://localhost:3001/videogame/created");
+    // console.log(data);
+     return dispatch({
+      type: GET_VIDEOGAMES_DB,
+      payload: data, 
+    });
+  };
+};
 
 export const getGenres = () => {
   return async (dispatch) => {
@@ -113,18 +127,10 @@ export function postVideogame(data) {
 
 
 
-
-
-
-
-
-
-
-
 export const filterGenres = (payload) => dispatch =>{
   return dispatch ({
     type: FILTER_GENRES,
-    payload: payload,  //objeto literal no es necesario
+    payload: payload,  
   });
 };
 
@@ -150,5 +156,22 @@ console.log(order);
   return {
   type: ORDER_BY_RATING,
   payload: order,
+  };
+};
+
+
+
+export const deleteById = (id) => {
+  return async function (dispatch) {
+    try {
+      const response = await axios.delete(`http://localhost:3001/videogames/${id}`);
+      
+      const data= response.data
+      
+      
+      dispatch({ type: DELETE, payload: data });
+    } catch (error) {
+      alert(error.message) 
+    }
   };
 };

@@ -2,52 +2,53 @@
 
 
 .containerLanding{
-    background: url(../img/HOME.jpg) no-repeat center center fixed;
+    background: url(../img/skirym.jpg) no-repeat center center fixed;
     background-size: cover;
-    -webkit-background-size: cover; /* Para navegadores webkit como Chrome y Safari */
-    -moz-background-size: cover; /* Para navegadores Firefox */
-    -o-background-size: cover; /* Para navegadores Opera */
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
     background-color: #000;
     
     
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content :center
+    justify-content :space-evenly;
     
 }
-.containerButton{
 
 
-.btn{
-height: 90px;
-width: 250px;
-font-family: Roboto, sans-serif;
-font-weight: 800;
-font-size: 30px;
-color: #fff;
-background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
-transition: 150ms;
-border-radius:20%;
-border: 2px solid rgb(255, 255, 255);
-
-
-
-}
-
-.btn:hover{
-    height: 90px;
-    width: 270px;
-    font-weight: 800;
-font-size: 30px;
-    background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
-    transition : 150ms;
+.imgStart{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
     cursor: pointer;
-    border-radius: 20%;
-    border: 2px solid rgb(248, 31, 31)
-
-
+    
+    transition: 0.5s;
+  
+}
+.imgStart:hover{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow:  8px 5px 15px 5px black;
+    transition: 0.5s;
+  
 }
 
 
+.divimg{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: space-around;
+}
+.img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    
+    box-shadow: 8px 5px 15px 5px;
 }
