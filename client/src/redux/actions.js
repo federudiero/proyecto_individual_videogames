@@ -107,7 +107,7 @@ export function postVideogame(data) {
   try {
     return async (dispatch) => {
     const newVideogame = await axios.post("http://localhost:3001/videogame", data);
-     console.log(data);
+    
     return dispatch({
       type: POST_VIDEOGAME,
       payload: newVideogame.data,
@@ -135,7 +135,7 @@ export const filterGenres = (payload) => dispatch =>{
 };
 
 export const filterByDB = (payload) => {
-  console.log(payload);
+ 
   return {
     type: FILTER_BY_DB,
     payload: payload,
@@ -143,7 +143,7 @@ export const filterByDB = (payload) => {
 };
 
 export const orderByAz = (order) => {
-  console.log(order);
+  
 return {
   type: ORDER_BY_AZ,
   payload: order,
@@ -152,7 +152,7 @@ return {
 };
 
 export const orderByRating = (order) => {
-console.log(order);
+
   return {
   type: ORDER_BY_RATING,
   payload: order,

@@ -15,7 +15,7 @@ const SearchBar = () => {
   }
   const searchHandler = () => {
     dispatch(getByName(input));
-    console.log(input)
+   
   };
 
     return (

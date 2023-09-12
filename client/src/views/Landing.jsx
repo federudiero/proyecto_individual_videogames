@@ -14,24 +14,23 @@ import img5 from '../img/nintendoswich.png'
 function Landing() {
   return (
     <div className={style.containerLanding}>
-   <div className={style.divimg}>
-    <img className={style.img} src={img1}/>
-    <img className={style.img} src={img2}/>
-    <img className={style.img} src={img3}/>
-   </div>
-   <div className={style.divimg}>
-    <img className={style.img} src={img4}/>
-    <img className={style.img} src={img5}/>
-  
-   </div>
-   
-    <div className={style.containerButton}>
+     <div className={style.containerButton}>
         
         <Link to="/home">
          <img className={style.imgStart} src={img}/>
         </Link>
     
     </div>
+    <div className={style.divimg}>
+      <img className={style.img} src={img1}/>
+      <img className={style.img} src={img2}/>
+      <img className={style.img} src={img3}/>
+      <img className={style.img} src={img4}/>
+      <img className={style.img} src={img5}/>
+   </div>
+   
+   
+   
 
   </div>
   )

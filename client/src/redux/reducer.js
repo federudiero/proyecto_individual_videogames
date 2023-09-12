@@ -24,12 +24,12 @@ const rootReducer = (state = initialState, action) => {
         case GET_GENRES:
       return {
         ...state,
-        genres: action.payload, //el action payload va a ser todos los videogames
+        genres: action.payload, 
       };
       case POST_VIDEOGAME:
       return {
         ...state,
-        games: action.payload, //el action payload va a ser todos los videogames
+        games: action.payload, 
        
       }; 
       

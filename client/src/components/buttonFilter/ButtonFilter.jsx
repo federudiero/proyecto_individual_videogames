@@ -13,12 +13,23 @@ const ButtonFilter=()=>{
     const dispatch = useDispatch()
     const genres = useSelector((state) => state.genres);
 
+
+
+
 const handleAZ = (event)=>{
     dispatch(orderByAz(event.target.value))
 }
+
+
+
+
 const handleRating = (event)=>{
     dispatch(orderByRating(event.target.value))
 }
+
+
+
+
 const handleDB = (event)=>{
     event.preventDefault();
     if (event.target.value === "db") {
@@ -29,6 +40,9 @@ const handleDB = (event)=>{
     }
    
 }
+
+
+
 const handleFGenres = (event)=>{
     event.preventDefault();
     if (event.target.value === "All") {
@@ -37,9 +51,15 @@ const handleFGenres = (event)=>{
     dispatch(filterGenres(event.target.value))
    
 }
+
+
+
+
 const  handleReset=()=>{
     dispatch(getVideoGames());
 }
+
+
 
 
 
